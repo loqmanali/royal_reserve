@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_animate/flutter_animate.dart';
+import 'package:royal_reserve/core/extensions/animation_extension.dart';
 import 'package:royal_reserve/core/widgets/custom_text.dart';
 
 import '../../../../core/style/app_colors.dart';
@@ -22,7 +24,7 @@ class SignInScreen extends StatelessWidget {
             const CustomText(
               text: 'التسجيل',
               style: Heading1Style(),
-            ),
+            ).animatedWidget(delay: 400.ms),
             const SizedBox(height: 35),
             const SignInForm(),
             const SizedBox(height: 35),
@@ -37,13 +39,11 @@ class SignInScreen extends StatelessWidget {
                   ),
                   TextSpan(
                     text: 'حساب جديد',
-                    style: AppTextStyles.instance.bodyText.copyWith(
-                      color: AppColors.primaryColor,
-                    ),
+                    style: AppTextStyles.instance.bodyText,
                   ),
                 ],
               ),
-            ),
+            ).animatedWidget(delay: 500.ms),
           ],
         ),
       ),
