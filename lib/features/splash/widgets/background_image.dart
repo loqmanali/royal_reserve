@@ -12,6 +12,8 @@ class BackgroundImage extends StatelessWidget {
       decoration: const BoxDecoration(
         image: DecorationImage(
           image: AssetImage('assets/images/bgReserve.png'),
+          fit: BoxFit.cover,
+          filterQuality: FilterQuality.medium,
         ),
       ),
       child: child,
