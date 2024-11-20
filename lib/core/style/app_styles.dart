@@ -24,31 +24,31 @@ class AppTextStyles with _$AppTextStyles {
       fontSize: 28,
       fontFamily: AppFonts.instance.arabicAlternativeFontFamily,
       fontWeight: AppFonts.instance.bold,
-      color: AppColors.primaryColor,
+      color: AppColors.primaryContainer,
     ),
     heading2: TextStyle(
       fontSize: 24,
       fontFamily: AppFonts.instance.arabicFontFamily,
       fontWeight: AppFonts.instance.bold,
-      color: AppColors.primaryColor,
+      color: AppColors.primaryContainer,
     ),
     subtitle: TextStyle(
       fontSize: 18,
       fontFamily: AppFonts.instance.arabicFontFamily,
       fontWeight: AppFonts.instance.medium,
-      color: AppColors.primaryColor,
+      color: AppColors.primaryContainer,
     ),
     bodyText: TextStyle(
       fontSize: 16,
       fontFamily: AppFonts.instance.arabicFontFamily,
       fontWeight: AppFonts.instance.regular,
-      color: AppColors.primaryColor,
+      color: AppColors.primaryContainer,
     ),
     smallText: TextStyle(
       fontSize: 12,
       fontFamily: AppFonts.instance.arabicFontFamily,
       fontWeight: AppFonts.instance.light,
-      color: AppColors.accentColor,
+      color: AppColors.primaryContainer,
     ),
     buttonText: TextStyle(
       fontSize: 16,
@@ -60,13 +60,13 @@ class AppTextStyles with _$AppTextStyles {
       fontSize: 16,
       fontFamily: AppFonts.instance.arabicFontFamily,
       fontWeight: AppFonts.instance.bold,
-      color: AppColors.primaryColor,
+      color: AppColors.primaryContainer,
     ),
     inputLabel: TextStyle(
       fontSize: 14,
       fontFamily: AppFonts.instance.arabicFontFamily,
       fontWeight: AppFonts.instance.bold,
-      color: AppColors.primaryColor,
+      color: AppColors.primaryContainer,
     ),
   );
 }
