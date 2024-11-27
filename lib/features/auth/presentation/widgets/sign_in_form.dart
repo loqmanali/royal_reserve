@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_animate/flutter_animate.dart';
+import 'package:go_router/go_router.dart';
 import 'package:royal_reserve/core/extensions/animation_extension.dart';
 import 'package:royal_reserve/core/widgets/custom_button.dart';
 import 'package:royal_reserve/core/widgets/custom_text.dart';
@@ -41,7 +42,9 @@ class SignInForm extends StatelessWidget {
           const SizedBox(height: 35),
           CustomButton(
             text: 'تسجيل الدخول',
-            onPressed: () {},
+            onPressed: () {
+              context.pushReplacementNamed('/home');
+            },
           ).animatedWidget(
             delay: 800.ms,
           ),

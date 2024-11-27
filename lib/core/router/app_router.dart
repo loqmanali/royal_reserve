@@ -1,17 +1,19 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
+import 'package:royal_reserve/features/home/presentation/pages/home_screen.dart';
 
 import '../../features/auth/presentation/pages/sing_in_screen.dart';
 import '../../features/splash/pages/splash_screen.dart';
 
 class AppRouter {
   static final GoRouter router = GoRouter(
-    initialLocation: '/',
+    initialLocation: AppRoutes.home,
     routes: [
       // Home Route
       GoRoute(
-        path: '/home',
-        builder: (context, state) => const Placeholder(),
+        path: AppRoutes.home,
+        name: AppRoutes.home,
+        builder: (context, state) => const HomeScreen(),
         routes: [
           // Nested route for tour details
           GoRoute(
@@ -19,7 +21,7 @@ class AppRouter {
             builder: (context, state) {
               // final id = state.pathParameters['id'];
               // return TourDetailsScreen(id: id!);
-              return const Placeholder();
+              return const Scaffold();
             },
           ),
         ],
@@ -29,27 +31,30 @@ class AppRouter {
 
       /// Splash Route
       GoRoute(
-        path: '/',
+        path: AppRoutes.splash,
+        name: AppRoutes.splash,
         builder: (context, state) => const SplashScreen(),
       ),
 
       // Login Route
       GoRoute(
-        name: '/sing-in',
-        path: '/sing-in',
+        name: AppRoutes.singIn,
+        path: AppRoutes.singIn,
         builder: (context, state) => const SignInScreen(),
       ),
 
       // Map Route
       GoRoute(
-        path: '/map',
-        builder: (context, state) => const Placeholder(),
+        path: AppRoutes.map,
+        name: AppRoutes.map,
+        builder: (context, state) => const Scaffold(),
       ),
 
       // Ticket Route
       GoRoute(
-        path: '/tickets',
-        builder: (context, state) => const Placeholder(),
+        path: AppRoutes.tickets,
+        name: AppRoutes.tickets,
+        builder: (context, state) => const Scaffold(),
       ),
     ],
     errorBuilder: (context, state) => const Scaffold(
@@ -58,4 +63,13 @@ class AppRouter {
       ),
     ),
   );
+}
+
+class AppRoutes {
+  static const String home = '/home';
+  static const String splash = '/';
+  static const String singIn = '/sing-in';
+  static const String map = '/map';
+  static const String tickets = '/tickets';
+  static const String profile = '/profile';
 }
