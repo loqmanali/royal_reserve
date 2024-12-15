@@ -170,13 +170,12 @@ The app uses a custom design system with:
 
 #### Authentication Screens
 
-![Login Screen](/path/to/login-screenshot.png)
-![Registration Screen](/path/to/registration-screenshot.png)
+![Login Screen](/assets/images/login-screenshot.png)
+![Splash Screen](/path/to/splash-screenshot.png)
 
 #### Main Features
 
-![Home Screen](/path/to/home-screenshot.png)
-![Profile Screen](/path/to/profile-screenshot.png)
+![Home Screen](/assets/images/home-screenshot.png)
 
 </details>
 

@@ -75,11 +75,11 @@ class _$AppFontsCopyWithImpl<$Res, $Val extends AppFonts>
     Object? arabicAlternativeFontFamily = null,
     Object? englishFontFamily = null,
     Object? englishAlternativeFontFamily = null,
-    Object? light = freezed,
-    Object? regular = freezed,
-    Object? medium = freezed,
-    Object? semiBold = freezed,
-    Object? bold = freezed,
+    Object? light = null,
+    Object? regular = null,
+    Object? medium = null,
+    Object? semiBold = null,
+    Object? bold = null,
   }) {
     return _then(_value.copyWith(
       arabicFontFamily: null == arabicFontFamily
@@ -98,23 +98,23 @@ class _$AppFontsCopyWithImpl<$Res, $Val extends AppFonts>
           ? _value.englishAlternativeFontFamily
           : englishAlternativeFontFamily // ignore: cast_nullable_to_non_nullable
               as String,
-      light: freezed == light
+      light: null == light
           ? _value.light
           : light // ignore: cast_nullable_to_non_nullable
               as FontWeight,
-      regular: freezed == regular
+      regular: null == regular
           ? _value.regular
           : regular // ignore: cast_nullable_to_non_nullable
               as FontWeight,
-      medium: freezed == medium
+      medium: null == medium
           ? _value.medium
           : medium // ignore: cast_nullable_to_non_nullable
               as FontWeight,
-      semiBold: freezed == semiBold
+      semiBold: null == semiBold
           ? _value.semiBold
           : semiBold // ignore: cast_nullable_to_non_nullable
               as FontWeight,
-      bold: freezed == bold
+      bold: null == bold
           ? _value.bold
           : bold // ignore: cast_nullable_to_non_nullable
               as FontWeight,
@@ -159,11 +159,11 @@ class __$$AppFontsImplCopyWithImpl<$Res>
     Object? arabicAlternativeFontFamily = null,
     Object? englishFontFamily = null,
     Object? englishAlternativeFontFamily = null,
-    Object? light = freezed,
-    Object? regular = freezed,
-    Object? medium = freezed,
-    Object? semiBold = freezed,
-    Object? bold = freezed,
+    Object? light = null,
+    Object? regular = null,
+    Object? medium = null,
+    Object? semiBold = null,
+    Object? bold = null,
   }) {
     return _then(_$AppFontsImpl(
       arabicFontFamily: null == arabicFontFamily
@@ -182,23 +182,23 @@ class __$$AppFontsImplCopyWithImpl<$Res>
           ? _value.englishAlternativeFontFamily
           : englishAlternativeFontFamily // ignore: cast_nullable_to_non_nullable
               as String,
-      light: freezed == light
+      light: null == light
           ? _value.light
           : light // ignore: cast_nullable_to_non_nullable
               as FontWeight,
-      regular: freezed == regular
+      regular: null == regular
           ? _value.regular
           : regular // ignore: cast_nullable_to_non_nullable
               as FontWeight,
-      medium: freezed == medium
+      medium: null == medium
           ? _value.medium
           : medium // ignore: cast_nullable_to_non_nullable
               as FontWeight,
-      semiBold: freezed == semiBold
+      semiBold: null == semiBold
           ? _value.semiBold
           : semiBold // ignore: cast_nullable_to_non_nullable
               as FontWeight,
-      bold: freezed == bold
+      bold: null == bold
           ? _value.bold
           : bold // ignore: cast_nullable_to_non_nullable
               as FontWeight,
@@ -277,11 +277,12 @@ class _$AppFontsImpl extends _AppFonts {
                     englishAlternativeFontFamily) ||
                 other.englishAlternativeFontFamily ==
                     englishAlternativeFontFamily) &&
-            const DeepCollectionEquality().equals(other.light, light) &&
-            const DeepCollectionEquality().equals(other.regular, regular) &&
-            const DeepCollectionEquality().equals(other.medium, medium) &&
-            const DeepCollectionEquality().equals(other.semiBold, semiBold) &&
-            const DeepCollectionEquality().equals(other.bold, bold));
+            (identical(other.light, light) || other.light == light) &&
+            (identical(other.regular, regular) || other.regular == regular) &&
+            (identical(other.medium, medium) || other.medium == medium) &&
+            (identical(other.semiBold, semiBold) ||
+                other.semiBold == semiBold) &&
+            (identical(other.bold, bold) || other.bold == bold));
   }
 
   @override
@@ -291,11 +292,11 @@ class _$AppFontsImpl extends _AppFonts {
       arabicAlternativeFontFamily,
       englishFontFamily,
       englishAlternativeFontFamily,
-      const DeepCollectionEquality().hash(light),
-      const DeepCollectionEquality().hash(regular),
-      const DeepCollectionEquality().hash(medium),
-      const DeepCollectionEquality().hash(semiBold),
-      const DeepCollectionEquality().hash(bold));
+      light,
+      regular,
+      medium,
+      semiBold,
+      bold);
 
   /// Create a copy of AppFonts
   /// with the given fields replaced by the non-null parameter values.

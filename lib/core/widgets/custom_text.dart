@@ -103,6 +103,7 @@ class CustomText extends StatelessWidget {
     return Text(
       text,
       style: style.getStyle(),
+      textDirection: TextDirection.rtl,
     );
   }
 }

@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import '../../../core/constant/app_images.dart';
+
 class BackgroundImage extends StatelessWidget {
   final Widget child;
 
@@ -11,7 +13,7 @@ class BackgroundImage extends StatelessWidget {
       alignment: Alignment.center,
       decoration: const BoxDecoration(
         image: DecorationImage(
-          image: AssetImage('assets/images/bgReserve.png'),
+          image: AssetImage(AppImages.background),
           fit: BoxFit.cover,
           filterQuality: FilterQuality.medium,
         ),

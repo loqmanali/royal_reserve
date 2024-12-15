@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_animate/flutter_animate.dart';
+import 'package:royal_reserve/core/constant/app_images.dart';
 
 class AnimatedLogo extends StatelessWidget {
   const AnimatedLogo({super.key});
@@ -7,7 +8,7 @@ class AnimatedLogo extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Image.asset(
-      'assets/images/logo.png',
+      AppImages.logo,
       width: 100,
       height: 100,
     ).animate().slideX(

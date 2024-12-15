@@ -9,7 +9,7 @@ class AppColors with _$AppColors {
 
   /// Primary Colors
   static const Color primaryColor = Color(0xFF835400);
-  static const Color backgroundColor = Color(0xFFFFF8F4);
+  static const Color backgroundColor = Color(0xFFFCF7ED);
   static const Color darkTextColor = Color(0xFF211A12);
   static const Color lightTextColor = Color(0xFFFFFFFF);
   static const Color secondaryColor = Color(0xFF7A5828);

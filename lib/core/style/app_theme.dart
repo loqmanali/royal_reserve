@@ -29,6 +29,12 @@ class AppTheme with _$AppTheme {
           color: AppColors.darkTextColor,
         ),
       ),
+      iconButtonTheme: IconButtonThemeData(
+        style: IconButton.styleFrom(
+          backgroundColor: AppColors.backgroundColor,
+        ),
+      ),
+      iconTheme: const IconThemeData(color: AppColors.darkTextColor),
       bottomNavigationBarTheme: const BottomNavigationBarThemeData(
         backgroundColor: AppColors.backgroundColor,
         selectedItemColor: AppColors.primaryColor,
