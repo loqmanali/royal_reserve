@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'animated_logo.dart';
-import 'animated_text.dart';
+import '../core.dart';
 
 class LogoWithText extends StatelessWidget {
   const LogoWithText({super.key});
@@ -12,7 +11,7 @@ class LogoWithText extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
         AnimatedLogo(),
-        SizedBox(width: 10),
+        Gap(10),
         AnimatedText(),
       ],
     );

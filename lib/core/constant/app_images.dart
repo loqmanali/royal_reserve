@@ -3,6 +3,9 @@ class AppImages {
   static const String logo = 'assets/images/logo.png';
   static const String background = 'assets/images/bgReserve.png';
   static const String safariImage = 'assets/images/bg1.png';
+  static const String appBarImage = 'assets/images/appbar_image.png';
+  static const String logoWithText = 'assets/images/logo_with_text.png';
+  static const String bannerBg = 'assets/images/banner_bg.png';
 
   /// SVG
   static const String homeIcon = 'assets/images/home.svg';
