@@ -20,6 +20,7 @@ dependencies:
   get_it:
   flutter_animate:
   animated_text_kit: ^4.2.2
+  barcode_widget:
   flutter_screenutil:
   flutter_bloc:
   bloc:
