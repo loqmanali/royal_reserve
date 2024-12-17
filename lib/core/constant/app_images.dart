@@ -6,6 +6,9 @@ class AppImages {
   static const String appBarImage = 'assets/images/appbar_image.png';
   static const String logoWithText = 'assets/images/logo_with_text.png';
   static const String bannerBg = 'assets/images/banner_bg.png';
+  static const String mapImage = 'assets/images/map_image.png';
+  static const String alSammanArea = 'assets/images/al_samman_area.png';
+  static const String ummQalidaArea = 'assets/images/umm_qalida_area.png';
 
   /// SVG
   static const String homeIcon = 'assets/images/home.svg';
