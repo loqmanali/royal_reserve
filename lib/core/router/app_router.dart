@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
-import 'package:royal_reserve/features/home/presentation/pages/home_screen.dart';
+import 'package:royal_reserve/core/core.dart';
 
 import '../../features/auth/presentation/pages/sing_in_screen.dart';
+import '../../features/profile/screen/profile_screen.dart';
 import '../../features/splash/pages/splash_screen.dart';
+import '../../features/tickets/screen/tickets_screen.dart';
 
 class AppRouter {
   static final GoRouter router = GoRouter(
@@ -13,7 +15,7 @@ class AppRouter {
       GoRoute(
         path: AppRoutes.home,
         name: AppRoutes.home,
-        builder: (context, state) => const HomeScreen(),
+        builder: (context, state) => const LayoutScreen(),
         routes: [
           // Nested route for tour details
           GoRoute(
@@ -54,7 +56,14 @@ class AppRouter {
       GoRoute(
         path: AppRoutes.tickets,
         name: AppRoutes.tickets,
-        builder: (context, state) => const Scaffold(),
+        builder: (context, state) => const TicketsScreen(),
+      ),
+
+      // Profile Route
+      GoRoute(
+        path: AppRoutes.profile,
+        name: AppRoutes.profile,
+        builder: (context, state) => const ProfileScreen(),
       ),
     ],
     errorBuilder: (context, state) => const Scaffold(

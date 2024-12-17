@@ -1,10 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
-import 'package:royal_reserve/core/constant/app_images.dart';
-import 'package:royal_reserve/core/router/app_router.dart';
-import 'package:royal_reserve/core/widgets/custom_bottom_navigation_bar.dart';
-
-import '../style/app_colors.dart';
+import 'package:royal_reserve/core/core.dart';
 
 /// Screen state to handle loading and error states
 class ScreenState {

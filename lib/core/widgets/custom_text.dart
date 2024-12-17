@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../style/app_styles.dart';
+import '../style/app_text_styles.dart';
 
 abstract class CustomTextStyle {
   final TextStyle? style;
@@ -36,56 +36,56 @@ class Heading1Style extends CustomTextStyle {
   const Heading1Style({super.style});
 
   @override
-  TextStyle getStyle() => applyStyle(AppTextStyles.instance.heading1);
+  TextStyle getStyle() => applyStyle(AppTextStyles.heading1);
 }
 
 class Heading2Style extends CustomTextStyle {
   const Heading2Style({super.style});
 
   @override
-  TextStyle getStyle() => applyStyle(AppTextStyles.instance.heading2);
+  TextStyle getStyle() => applyStyle(AppTextStyles.heading2);
 }
 
 class SubtitleStyle extends CustomTextStyle {
   const SubtitleStyle({super.style});
 
   @override
-  TextStyle getStyle() => applyStyle(AppTextStyles.instance.subtitle);
+  TextStyle getStyle() => applyStyle(AppTextStyles.subtitle);
 }
 
 class BodyTextStyle extends CustomTextStyle {
   const BodyTextStyle({super.style});
 
   @override
-  TextStyle getStyle() => applyStyle(AppTextStyles.instance.bodyText);
+  TextStyle getStyle() => applyStyle(AppTextStyles.bodyText);
 }
 
 class SmallTextStyle extends CustomTextStyle {
   const SmallTextStyle({super.style});
 
   @override
-  TextStyle getStyle() => applyStyle(AppTextStyles.instance.smallText);
+  TextStyle getStyle() => applyStyle(AppTextStyles.smallText);
 }
 
 class ButtonTextStyle extends CustomTextStyle {
   const ButtonTextStyle({super.style});
 
   @override
-  TextStyle getStyle() => applyStyle(AppTextStyles.instance.buttonText);
+  TextStyle getStyle() => applyStyle(AppTextStyles.buttonText);
 }
 
 class InputTextStyle extends CustomTextStyle {
   const InputTextStyle({super.style});
 
   @override
-  TextStyle getStyle() => applyStyle(AppTextStyles.instance.inputText);
+  TextStyle getStyle() => applyStyle(AppTextStyles.inputText);
 }
 
 class InputLabelStyle extends CustomTextStyle {
   const InputLabelStyle({super.style});
 
   @override
-  TextStyle getStyle() => applyStyle(AppTextStyles.instance.inputLabel);
+  TextStyle getStyle() => applyStyle(AppTextStyles.inputLabel);
 }
 
 class CustomText extends StatelessWidget {

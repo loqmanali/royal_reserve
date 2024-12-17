@@ -2,7 +2,7 @@ import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:flutter/material.dart';
 
 import '../style/app_colors.dart';
-import '../style/app_styles.dart';
+import '../style/app_text_styles.dart';
 
 class AnimatedText extends StatelessWidget {
   const AnimatedText({super.key});
@@ -32,7 +32,7 @@ class AnimatedTextLine extends StatelessWidget {
       animatedTexts: [
         TypewriterAnimatedText(
           text,
-          textStyle: AppTextStyles.instance.subtitle.copyWith(
+          textStyle: AppTextStyles.subtitle.copyWith(
             color: AppColors.white,
           ),
           cursor: '',
