@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:go_router/go_router.dart';
 import 'package:royal_reserve/core/core.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -332,7 +333,7 @@ class BannerWithTextButton extends StatelessWidget {
               ),
             ),
             onPressed: () {
-              // Button action
+              context.goNamed(AppRoutes.beekeepingPermits);
             },
             child: Text(
               'إصدار تصريح',

@@ -1,0 +1,1 @@
+enum DatePickerType { single, range }

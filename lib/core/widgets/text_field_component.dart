@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../style/app_colors.dart';
-import 'custom_text.dart';
+import '../core.dart';
 
 mixin FormFieldProperties {
   String get keyName;
@@ -35,6 +34,7 @@ mixin FormFieldProperties {
   int get multilineRows;
   TextInputType get keyboardType;
   Color get backgroundColor;
+  Color get cursorColor;
   bool get readOnly;
   Function? get onTap;
 }
@@ -106,6 +106,8 @@ class TextFieldComponent extends StatelessWidget with FormFieldProperties {
   final Function? onTap;
   @override
   final bool readOnly;
+  @override
+  final Color cursorColor;
 
   const TextFieldComponent({
     super.key,
@@ -123,8 +125,8 @@ class TextFieldComponent extends StatelessWidget with FormFieldProperties {
     this.prefixIcon,
     this.suffixIcon,
     this.borderRadius = 5.0,
-    this.borderColor = AppColors.borderColor,
-    this.borderFocusColor = AppColors.borderColor,
+    this.borderColor = AppColors.white,
+    this.borderFocusColor = AppColors.white,
     this.borderWidth = 2,
     this.focusedBorderWidth = 2,
     this.enabledBorderWidth = 1,
@@ -133,7 +135,7 @@ class TextFieldComponent extends StatelessWidget with FormFieldProperties {
     this.prefixIconPadding = const EdgeInsets.all(0),
     this.isMultiline = false,
     this.onChange,
-    this.textColor = Colors.black,
+    this.textColor = AppColors.white,
     this.hintColor = Colors.grey,
     this.validationColor = Colors.redAccent,
     this.contentPadding = 6,
@@ -142,6 +144,7 @@ class TextFieldComponent extends StatelessWidget with FormFieldProperties {
     this.backgroundColor = Colors.white,
     this.onTap,
     this.readOnly = false,
+    this.cursorColor = AppColors.backgroundColor,
   });
 
   InputDecoration _buildInputDecoration() {
@@ -196,11 +199,14 @@ class TextFieldComponent extends StatelessWidget with FormFieldProperties {
         onTap: () => onTap?.call(),
         maxLines: isMultiline ? multilineRows : 1,
         maxLength: maxLength,
-        cursorColor: AppColors.brightBlue,
+        cursorColor: cursorColor,
         validator: onValidate,
         onSaved: onSaved,
         onChanged: (value) => onChange?.call(value),
-        style: TextStyle(fontSize: fontSize, color: textColor),
+        style: AppTextStyles.inputText.copyWith(
+          fontSize: fontSize,
+          color: textColor,
+        ),
         decoration: _buildInputDecoration(),
       ),
     );
@@ -219,7 +225,7 @@ class TextFieldComponentWithLabel extends StatelessWidget {
     super.key,
     required this.labelName,
     this.labelFontSize = 15.0,
-    this.labelBold = true,
+    this.labelBold = false,
     this.labelColor,
     required this.formField,
     this.labelPadding = const EdgeInsets.only(
@@ -239,13 +245,12 @@ class TextFieldComponentWithLabel extends StatelessWidget {
         children: [
           Padding(
             padding: labelPadding,
-            child: CustomText(
-              text: labelName,
-              style: InputLabelStyle(
-                style: TextStyle(
-                  color: labelColor,
-                  fontSize: labelFontSize,
-                ),
+            child: Text(
+              labelName,
+              style: AppTextStyles.smallText.copyWith(
+                color: labelColor,
+                fontSize: labelFontSize,
+                fontWeight: labelBold ? FontWeight.bold : FontWeight.normal,
               ),
             ),
           ),

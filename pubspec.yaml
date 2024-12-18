@@ -28,6 +28,7 @@ dependencies:
   rxdart:
   connectivity_plus:
   internet_connection_checker:
+  intl:
 
 dev_dependencies:
   flutter_test:

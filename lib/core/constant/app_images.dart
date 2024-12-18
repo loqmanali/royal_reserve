@@ -16,4 +16,5 @@ class AppImages {
   static const String ticketIcon = 'assets/images/ticket-star.svg';
   static const String profileIcon = 'assets/images/profile.svg';
   static const String shareIcon = 'assets/images/share.svg';
+  static const String beeIcon = 'assets/images/bee_icon.svg';
 }

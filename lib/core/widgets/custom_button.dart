@@ -19,6 +19,7 @@ class CustomButton extends StatelessWidget {
   final String label;
   final Color? labelColor;
   final Color? backgroundColor;
+
   @override
   Widget build(BuildContext context) {
     return SizedBox(
@@ -27,7 +28,7 @@ class CustomButton extends StatelessWidget {
         onPressed: isDisabled ? null : onPressed,
         style: ElevatedButton.styleFrom(
           backgroundColor: backgroundColor ?? AppColors.primaryContainer,
-          minimumSize: const Size(0, 56),
+          minimumSize: const Size(0, 50),
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(16),
           ),

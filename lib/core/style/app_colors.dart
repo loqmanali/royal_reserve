@@ -109,4 +109,6 @@ class AppColors {
   static const Color lightGrey = Color(0xFFD3D3D3);
   static const Color title = Color(0xFFCD8236);
   static const Color smallText = Color(0xFF584640);
+  static const Color smallText2 = Color(0xFFBA6E0C);
+  static const Color smallText3 = Color(0xFFF3EBDB);
 }
