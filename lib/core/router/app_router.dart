@@ -1,9 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:royal_reserve/core/core.dart';
-import 'package:royal_reserve/features/home/presentation/pages/beekeeping_permits_screen.dart';
+import 'package:royal_reserve/features/map/screen/map_screen.dart';
+import 'package:royal_reserve/features/permits/screens/beekeeping_permits_screen.dart';
 
 import '../../features/auth/presentation/pages/sing_in_screen.dart';
+import '../../features/permits/screens/alsamman_area_login.dart';
+import '../../features/permits/screens/alsamman_area_login_form_screen.dart';
+import '../../features/permits/screens/off_duty_work_permit.dart';
 import '../../features/profile/screen/profile_screen.dart';
 import '../../features/splash/pages/splash_screen.dart';
 import '../../features/tickets/screen/tickets_screen.dart';
@@ -11,6 +15,7 @@ import '../../features/tickets/screen/tickets_screen.dart';
 class AppRouter {
   static final GoRouter router = GoRouter(
     initialLocation: AppRoutes.home,
+    debugLogDiagnostics: true,
     routes: [
       // Home Route
       GoRoute(
@@ -55,7 +60,24 @@ class AppRouter {
       GoRoute(
         path: AppRoutes.map,
         name: AppRoutes.map,
-        builder: (context, state) => const Scaffold(),
+        builder: (context, state) => const MapScreen(),
+        routes: [
+          GoRoute(
+            path: AppRoutes.alSammanAreaLogin,
+            name: AppRoutes.alSammanAreaLogin,
+            builder: (context, state) => const AlSammanAreaLoginScreen(),
+          ),
+          GoRoute(
+            path: AppRoutes.offDutyWorkPermit,
+            name: AppRoutes.offDutyWorkPermit,
+            builder: (context, state) => const OffDutyWorkPermitScreen(),
+          ),
+          GoRoute(
+            path: AppRoutes.alSammanAreaLoginForm,
+            name: AppRoutes.alSammanAreaLoginForm,
+            builder: (context, state) => const AlSammanAreaLoginFormScreen(),
+          ),
+        ],
       ),
 
       // Ticket Route
@@ -88,4 +110,7 @@ class AppRoutes {
   static const String tickets = '/tickets';
   static const String profile = '/profile';
   static const String beekeepingPermits = '/beekeeping-permits';
+  static const String alSammanAreaLogin = '/al-samman-area-login';
+  static const String offDutyWorkPermit = '/off-duty-work-permit';
+  static const String alSammanAreaLoginForm = '/al-samman-area-login-form';
 }

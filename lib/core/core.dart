@@ -27,6 +27,7 @@ export 'widgets/custom_bottom_navigation_bar.dart';
 export 'widgets/custom_button.dart';
 export 'widgets/custom_navigation_bar.dart';
 export 'widgets/custom_radio_menu_button.dart';
+export 'widgets/custom_sliver_app_bar.dart';
 export 'widgets/custom_text.dart';
 export 'widgets/gap.dart';
 export 'widgets/logo_with_text.dart';
