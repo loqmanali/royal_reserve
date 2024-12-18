@@ -32,11 +32,11 @@ class TicketWidget extends StatelessWidget {
                   _buildAppBar(context),
                   Divider(
                     color: AppColors.primaryContainer,
-                    thickness: 2,
+                    thickness: 1,
                     indent: 10.w,
                     endIndent: 10.w,
                   ),
-                  SizedBox(height: MediaQuery.of(context).size.height * 0.01),
+                  SizedBox(height: MediaQuery.sizeOf(context).height * 0.01),
                   _buildTicketContent(context),
                 ],
               ),
@@ -49,15 +49,19 @@ class TicketWidget extends StatelessWidget {
 
   Widget _buildBackgroundImage(BuildContext context) {
     return Container(
-      height: MediaQuery.of(context).size.height * 0.35,
-      decoration: const BoxDecoration(
-        borderRadius: BorderRadius.only(
+      height: MediaQuery.sizeOf(context).height * 0.38,
+      decoration: BoxDecoration(
+        borderRadius: const BorderRadius.only(
           bottomLeft: Radius.circular(20),
           bottomRight: Radius.circular(20),
         ),
         image: DecorationImage(
-          image: AssetImage(AppImages.alSammanArea),
+          image: const AssetImage(AppImages.alSammanArea),
           fit: BoxFit.cover,
+          colorFilter: ColorFilter.mode(
+            Colors.black.withOpacity(0.5),
+            BlendMode.darken,
+          ),
         ),
       ),
     );

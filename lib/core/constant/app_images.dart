@@ -17,4 +17,8 @@ class AppImages {
   static const String profileIcon = 'assets/images/profile.svg';
   static const String shareIcon = 'assets/images/share.svg';
   static const String beeIcon = 'assets/images/bee_icon.svg';
+  static const String almihaIcon = 'assets/images/almiha.svg';
+  static const String alnamirIcon = 'assets/images/alnamir.svg';
+  static const String monkeysIcon = 'assets/images/monkeys.svg';
+  static const String wolfIcon = 'assets/images/wolf.svg';
 }
