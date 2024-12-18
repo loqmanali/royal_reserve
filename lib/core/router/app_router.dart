@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:royal_reserve/core/core.dart';
+import 'package:royal_reserve/features/home/presentation/pages/beekeeping_permits_screen.dart';
 
 import '../../features/auth/presentation/pages/sing_in_screen.dart';
 import '../../features/profile/screen/profile_screen.dart';
@@ -9,7 +10,7 @@ import '../../features/tickets/screen/tickets_screen.dart';
 
 class AppRouter {
   static final GoRouter router = GoRouter(
-    initialLocation: AppRoutes.splash,
+    initialLocation: AppRoutes.home,
     routes: [
       // Home Route
       GoRoute(
@@ -25,6 +26,11 @@ class AppRouter {
               // return TourDetailsScreen(id: id!);
               return const Scaffold();
             },
+          ),
+          GoRoute(
+            path: AppRoutes.beekeepingPermits,
+            name: AppRoutes.beekeepingPermits,
+            builder: (context, state) => const BeekeepingPermitsScreen(),
           ),
         ],
       ),
@@ -81,4 +87,5 @@ class AppRoutes {
   static const String map = '/map';
   static const String tickets = '/tickets';
   static const String profile = '/profile';
+  static const String beekeepingPermits = '/beekeeping-permits';
 }
