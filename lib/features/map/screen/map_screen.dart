@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:go_router/go_router.dart';
 import 'package:royal_reserve/core/core.dart';
+
+import '../../../core/widgets/card_with_image.dart';
 
 class MapScreen extends StatelessWidget {
   const MapScreen({super.key});
@@ -53,77 +56,20 @@ class MapScreen extends StatelessWidget {
                   title: 'منطقة أم قليدة',
                 ),
                 const Gap(16),
-                const CardWithImage(
-                  imagePath: AppImages.alSammanArea,
-                  title: 'منطقة الصمان',
+                GestureDetector(
+                  onTap: () {
+                    context.goNamed(AppRoutes.alSammanAreaLogin);
+                  },
+                  child: const CardWithImage(
+                    imagePath: AppImages.alSammanArea,
+                    title: 'منطقة الصمان',
+                  ),
                 ),
               ],
             ),
           ),
         ),
       ],
-    );
-  }
-}
-
-class CardWithImage extends StatelessWidget {
-  const CardWithImage({
-    super.key,
-    required this.imagePath,
-    required this.title,
-    this.borderRadius,
-  });
-
-  final String imagePath;
-  final String title;
-  final double? borderRadius;
-
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      height: 150,
-      decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(borderRadius ?? 16),
-      ),
-      child: ClipRRect(
-        borderRadius: BorderRadius.circular(borderRadius ?? 16),
-        child: Stack(
-          children: [
-            // Image
-            Image.asset(
-              imagePath,
-              width: double.infinity,
-              height: double.infinity,
-              fit: BoxFit.cover,
-            ),
-            // Gradient overlay
-            Container(
-              decoration: BoxDecoration(
-                gradient: LinearGradient(
-                  begin: Alignment.topCenter,
-                  end: Alignment.bottomCenter,
-                  colors: [
-                    Colors.transparent,
-                    Colors.black.withOpacity(0.5),
-                  ],
-                ),
-              ),
-            ),
-            // Title
-            Positioned(
-              bottom: 16,
-              right: 16,
-              child: Text(
-                title,
-                style: AppTextStyles.bodyText.copyWith(
-                  color: AppColors.white,
-                  fontWeight: FontWeight.bold,
-                ),
-              ),
-            ),
-          ],
-        ),
-      ),
     );
   }
 }
